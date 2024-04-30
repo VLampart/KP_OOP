@@ -1,6 +1,6 @@
 # CompBuild
 ## Mind Map
-![Alt text](images/Mind Map.png "Mind Map")
+![Alt text](images/MindMap.png "Mind Map")
 
 ## Програмна реалізація класу
 ...
