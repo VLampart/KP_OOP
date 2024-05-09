@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ICNeq/9IoL4Qz8LwBtRZefi3TjSvJMG6uLm6sWaLkrIl0WwcGH72WPJN/u6Gyqx4pzqgnsg7kRX3ElY0YxeyOw==",
+  "dgSpecHash": "MPlbP8Yz9hy+KWDrpBDPaVLcj7x+CSRGF6UeTAv41KyH0UZy0sveNetX2bPaC36SUa/4GXJV91PA5Ns6eg6FRQ==",
   "success": true,
-  "projectFilePath": "D:\\KHAI\\C#\\KP_Console\\KP_Console\\KP_Console.csproj",
+  "projectFilePath": "D:\\KHAI\\C#\\KP_OOP\\KP_Console\\KP_Console\\KP_Console.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Taldusf\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Taldusf\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",

@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace Utils
 {
-    internal class InputUtils
+    public class InputUtils
     {
         public static uint ReadValidUInt()
+        {
+            return 0;
+        }
+
+        public static int ReadValidInt()
         {
             return 0;
         }
@@ -21,7 +26,7 @@ namespace Utils
 
         public static string ReadValidPhone()
         {
-            return "";    
+            return "";
         }
 
         public static string ReadValidLogin()

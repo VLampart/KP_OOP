@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KHAI\\C#\\KP_Console\\KP_Console\\KP_Console.csproj": {}
+    "D:\\KHAI\\C#\\KP_OOP\\KP_Console\\KP_Console\\KP_Console.csproj": {}
   },
   "projects": {
-    "D:\\KHAI\\C#\\KP_Console\\KP_Console\\KP_Console.csproj": {
+    "D:\\KHAI\\C#\\KP_OOP\\KP_Console\\KP_Console\\KP_Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KHAI\\C#\\KP_Console\\KP_Console\\KP_Console.csproj",
+        "projectUniqueName": "D:\\KHAI\\C#\\KP_OOP\\KP_Console\\KP_Console\\KP_Console.csproj",
         "projectName": "KP_Console",
-        "projectPath": "D:\\KHAI\\C#\\KP_Console\\KP_Console\\KP_Console.csproj",
+        "projectPath": "D:\\KHAI\\C#\\KP_OOP\\KP_Console\\KP_Console\\KP_Console.csproj",
         "packagesPath": "C:\\Users\\Taldusf\\.nuget\\packages\\",
-        "outputPath": "D:\\KHAI\\C#\\KP_Console\\KP_Console\\obj\\",
+        "outputPath": "D:\\KHAI\\C#\\KP_OOP\\KP_Console\\KP_Console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Taldusf\\AppData\\Roaming\\NuGet\\NuGet.Config",
