@@ -58,27 +58,60 @@ namespace Users
 
         void IUserActions.LogOut()
         {
-
+            if (IsAuth)
+            {
+                IsAuth = false;
+                Console.WriteLine("Logout successful!");
+            }
+            else
+            {
+                throw new Exception("Error! You are not authorized.");
+            }
         }
 
         void IUserActions.AddToCart(uint productId, uint productCount)
         {
+            if (Cart.ContainsKey(productId))
+            {
+                Cart[productId] += productCount;
+            }
+            else
+            {
+                Cart.Add(productId, productCount);
+            }
 
+            Console.WriteLine("Product added to cart!");
         }
 
         void IUserActions.RemoveFromCart(uint productId)
         {
-
+            if (Cart.ContainsKey(productId))
+            {
+                Cart.Remove(productId);
+                Console.WriteLine("Product removed from cart!");
+            }
+            else
+            {
+                throw new Exception("Error! Product not found in cart.");
+            }
         }
 
         void IUserActions.ConfirmOrder()
         {
-
+            if (Cart.Count > 0)
+            {
+                Console.WriteLine("Order confirmed!");
+                Cart.Clear();
+            }
+            else
+            {
+                throw new Exception("Error! Cart is empty.");
+            }
         }
 
         public override string ToString()
         {
-            return "";
+            return $"Login: {Login} \nPassword: {Password} \nPhone: {FirstName} \nMiddleName: {MiddleName} \nLastName: {LastName} \nIsAdmin: {IsAdmin} \nIsAuth: {IsAuth}";
         }
     }
 }

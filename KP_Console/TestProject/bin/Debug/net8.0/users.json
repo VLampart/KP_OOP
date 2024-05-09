@@ -1,0 +1,17 @@
+{
+  "$id": "1",
+  "testuser": {
+    "$id": "2",
+    "Login": "testuser",
+    "Password": "testpassword",
+    "Phone": "1234567890",
+    "FirstName": "Test",
+    "MiddleName": "User",
+    "LastName": "Testuser",
+    "IsAdmin": false,
+    "IsAuth": true,
+    "Cart": {
+      "$id": "3"
+    }
+  }
+}
