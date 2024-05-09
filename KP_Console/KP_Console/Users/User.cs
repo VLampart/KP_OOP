@@ -7,7 +7,7 @@ using Interfaces;
 
 namespace Users
 {
-    internal class User : IUserActions
+    public class User : IUserActions
     {
         private string login;
         private string password;
@@ -56,17 +56,7 @@ namespace Users
             Cart = new Dictionary<uint, uint>();
         }
 
-        void IUserActions.Register()
-        {
-
-        }
-
-        void IUserActions.Auth(string login, string password, bool isAuth)
-        {
-
-        }
-
-        void IUserActions.LogOut(bool isAuth)
+        void IUserActions.LogOut()
         {
 
         }

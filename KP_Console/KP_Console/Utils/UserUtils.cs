@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Utils
 {
-    internal class UserUtils
+    public class UserUtils
     {
         private Dictionary<string, User> users = new Dictionary<string, User>();
         private JsonUtils jsonUtils = new JsonUtils();
@@ -37,6 +37,16 @@ namespace Utils
 
         public void LoadUserFromJson()
         {
+        }
+
+        public static void Register(string login, string password, string phone, string firstName, string middleName, string lastName, bool isAdmin)
+        {
+
+        }
+
+        public static User Auth(string login, string password)
+        {
+            return null;
         }
     }
 }
