@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Products
 {
-    internal class PowerSupply : Product
+    public class PowerSupply : Product
     {
         private uint supplyPower;
 

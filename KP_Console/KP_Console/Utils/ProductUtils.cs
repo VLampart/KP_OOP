@@ -8,12 +8,13 @@ using Products;
 
 namespace Utils
 {
-    internal class ProductUtils
+    public class ProductUtils
     {
         Dictionary<uint, Product> products = new Dictionary<uint, Product>();
         private JsonUtils jsonUtils = new JsonUtils();
         public string fileName = "products.json";
 
+        public Dictionary<uint, Product> Products { get => products; set => products = value; }
         public ProductUtils(string filename = "products.json")
         {
         }

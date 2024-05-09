@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Products
 {
-    internal abstract class Product
+    public abstract class Product
     {
         protected uint productID;
         protected string productCaption;

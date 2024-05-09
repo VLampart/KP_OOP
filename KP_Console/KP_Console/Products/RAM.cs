@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Products
 {
-    enum RAMType
+    public enum RAMType
     {
         DDR3,
         DDR4,
         DDR5
     }
 
-    internal class RAM : Product
+    public class RAM : Product
     {
         private uint ramCapacity;
         private double ramFrequency;

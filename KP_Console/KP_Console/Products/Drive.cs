@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace Products
 {
-    enum DriveType
+    public enum DriveType
     {
         HDD,
         SSD,
         NVMe
     }
 
-    enum DriveInterface
+    public enum DriveInterface
     {
         SATA,
         mSATA,
         M2
     }
-    internal class Drive : Product
+
+    public class Drive : Product
     {
         private uint driveCapacity;
         private uint driveRead;

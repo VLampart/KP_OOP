@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Products
 {
-    internal class CPU : Product
+    public class CPU : Product
     {
         private uint cpuCoresCount;
         private double cpuFrequency;

@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Products
 {
-    enum GPUMemoryType
+    public enum GPUMemoryType
     {
         GDDR5,
         GDDR6,
         GDDR7
     }
 
-    enum GPUInterface
+    public enum GPUInterface
     {
         PCIe3,
         PCIe4,
         PCIe5
     }
 
-    internal class GPU : Product
+    public class GPU : Product
     {
         private uint gpuPower;
         private uint gpuMemoryCapacity;

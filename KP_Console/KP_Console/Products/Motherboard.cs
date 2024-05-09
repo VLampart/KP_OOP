@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Products
 {
-    internal class Motherboard : Product
+    public class Motherboard : Product
     {
         private string motherboardSocket;
         private string motherboardChipset;
