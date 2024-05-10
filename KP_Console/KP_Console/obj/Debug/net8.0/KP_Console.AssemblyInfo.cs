@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KP_Console")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85e3d0aed17a6615edc6cc14e08320dfc7ceff60")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2185109209d8126e7cee49056455405d5563a3c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("KP_Console")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KP_Console")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

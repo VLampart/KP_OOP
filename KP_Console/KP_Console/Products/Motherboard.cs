@@ -32,7 +32,7 @@ namespace Products
 
         public override string ToString()
         {
-            return "";
+            return base.ToString() + $"\nMotherboardSocket: {MotherboardSocket}\nMotherboardChipset: {MotherboardChipset}\nMotherboardRam: {MotherboardRam}";
         }
     }
 }

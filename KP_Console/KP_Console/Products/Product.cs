@@ -44,7 +44,7 @@ namespace Products
 
         public override string? ToString()
         {
-            return "";
+            return $"ProductId: {ProductID} \nProductCaption: {ProductCaption} \nProductManufacturer: {ProductManufacturer} \nProductPrice: {ProductPrice} \nProductDescription: {ProductDescription} \nProductCount: {ProductCount}";
         }
     }
 }

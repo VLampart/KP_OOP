@@ -48,7 +48,7 @@ namespace Products
 
         public override string? ToString()
         {
-            return "";
+            return base.ToString() + $"\nGPUPower: {GPUPower}\nGPUMemoryCapacity: {GPUMemoryCapacity}\nGPUMemoryType: {GPUMemoryType}\nGPUInterface: {GPUInterface}";
         }
     }
 }

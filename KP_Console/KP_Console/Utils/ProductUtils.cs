@@ -15,38 +15,66 @@ namespace Utils
         public string fileName = "products.json";
 
         public Dictionary<uint, Product> Products { get => products; set => products = value; }
+
         public ProductUtils(string filename = "products.json")
         {
+            fileName = filename;
+            LoadProductFromJson();
+            foreach (Product product in products.Values)
+            {
+                Console.WriteLine(Convert.ChangeType(product, product.GetType()));
+            }
         }
 
         public void AddProduct(Product product)
         {
+            products.Add(product.ProductID, product);
+            SaveProductToJson();
         }
 
         public void EditProduct(Product product)
         {
+            products[product.ProductID] = product;
+            SaveProductToJson();
         }
 
         public void DeleteProduct(uint productId)
         {
+            if (products.ContainsKey(productId))
+            {
+                products.Remove(productId);
+                SaveProductToJson();
+            }
+            else throw new Exception("Error! Product not found");
         }
 
         public void SaveProductToJson()
         {
+            jsonUtils.SaveToJson(products, fileName);
         }
 
         public void LoadProductFromJson()
         {
+            products = jsonUtils.LoadFromJson<Dictionary<uint, Product>>(fileName);
+            if (products == null) products = new Dictionary<uint, Product>();
         }
 
         public string GetProductDetails(uint productId)
         {
-            return "";
+            if (products.ContainsKey(productId))
+            {
+                return Convert.ChangeType(products[productId], products[productId].GetType()).ToString();
+            }
+            else return "Error! Product not found";
         }
 
         public uint GetProductCount(uint productId)
         {
-            return 0;   
+            if (products.ContainsKey(productId))
+            {
+                return products[productId].ProductCount;
+            }
+            else throw new Exception("Error! Product not found");
         }
     }
 }

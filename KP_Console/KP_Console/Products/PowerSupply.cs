@@ -24,7 +24,7 @@ namespace Products
 
         public override string ToString()
         {
-            return "";
+            return base.ToString() + $"\nSupplyPower: {SupplyPower}";
         }
     }
 }

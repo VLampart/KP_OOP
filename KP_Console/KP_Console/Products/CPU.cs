@@ -32,7 +32,7 @@ namespace Products
 
         public override string? ToString()
         {
-            return "";
+            return base.ToString() + $"\nCPUCores: {CPUCoresCount}\nCPUFrequency: {CPUFrequency}\nCPUSocket: {CPUSocket}";
         }
     }
 }
