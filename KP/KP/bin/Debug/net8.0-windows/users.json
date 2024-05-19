@@ -1,0 +1,24 @@
+{
+  "admin": {
+    "Login": "admin",
+    "Password": "admin",
+    "Phone": "+380000000001",
+    "FirstName": "admin",
+    "MiddleName": "admin",
+    "LastName": "admin",
+    "IsAdmin": true,
+    "IsAuth": true,
+    "Cart": {}
+  },
+  "guest": {
+    "Login": "guest",
+    "Password": "guest",
+    "Phone": "+380123456789",
+    "FirstName": "Олег",
+    "MiddleName": "Гість",
+    "LastName": "Петрович",
+    "IsAdmin": false,
+    "IsAuth": false,
+    "Cart": {}
+  }
+}

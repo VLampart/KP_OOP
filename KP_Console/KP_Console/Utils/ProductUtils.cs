@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Products;
+using Users;
 
 
 namespace Utils
@@ -12,24 +13,33 @@ namespace Utils
     {
         Dictionary<uint, Product> products = new Dictionary<uint, Product>();
         private JsonUtils jsonUtils = new JsonUtils();
-        public string fileName = "products.json";
+        private string fileName;
 
         public Dictionary<uint, Product> Products { get => products; set => products = value; }
 
-        public ProductUtils(string filename = "products.json")
+        public ProductUtils(string _filename = "products.json")
         {
-            fileName = filename;
-            LoadProductFromJson();
-            foreach (Product product in products.Values)
+            fileName = _filename;
+            if (File.Exists(fileName))
             {
-                Console.WriteLine(Convert.ChangeType(product, product.GetType()));
+                LoadProductFromJson();
+                foreach (Product product in products.Values)
+                {
+                    Console.WriteLine(Convert.ChangeType(product, product.GetType()));
+                }
+            }
+            else
+            {
+                Products = new Dictionary<uint, Product>();
             }
         }
 
-        public void AddProduct(Product product)
+        public uint AddProduct(Product product)
         {
+            product.ProductID = (uint)Guid.NewGuid().GetHashCode();
             products.Add(product.ProductID, product);
             SaveProductToJson();
+            return product.ProductID;
         }
 
         public void EditProduct(Product product)
@@ -75,6 +85,18 @@ namespace Utils
                 return products[productId].ProductCount;
             }
             else throw new Exception("Error! Product not found");
+        }
+
+        public static string GetCategory(Product product)
+        {
+            if (product == null) return "";
+            if (product is CPU) return "CPU";
+            if (product is Motherboard) return "Motherboard";
+            if (product is RAM) return "RAM";
+            if (product is GPU) return "GPU";
+            if (product is Drive) return "Drive";
+            if (product is PowerSupply) return "Power Supply";
+            return "";
         }
     }
 }

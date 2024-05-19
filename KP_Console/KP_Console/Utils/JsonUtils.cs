@@ -12,7 +12,6 @@ namespace Utils
         private JsonSerializerSettings jsonSettings = new JsonSerializerSettings
         {
             TypeNameHandling = TypeNameHandling.Auto,
-            PreserveReferencesHandling = PreserveReferencesHandling.Objects
         };
 
         public void SaveToJson<T>(T data, string fileName)

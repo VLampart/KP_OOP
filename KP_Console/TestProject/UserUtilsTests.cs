@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestProject
+﻿namespace TestProject
 {
     [TestClass]
     public class UserUtilsTests
@@ -16,6 +10,11 @@ namespace TestProject
         public void TestInitialize()
         {
             _userUtils = new UserUtils(_testFileName);
+
+            if (File.Exists(_testFileName))
+            {
+                File.Delete(_testFileName);
+            }
         }
 
         [TestCleanup]
@@ -66,6 +65,38 @@ namespace TestProject
 
             // Assert
             Assert.IsFalse(_userUtils.Users.ContainsKey(user.Login));
+        }
+
+        [TestMethod]
+        public void AddUser_Failed_UserAlreadyExists()
+        {
+            // Arrange
+            User user = new User { Login = "testuser", Password = "testpassword" };
+            _userUtils.AddUser(user);
+
+            // Act & Assert
+            Assert.ThrowsException<ArgumentException>(() => _userUtils.AddUser(user));
+        }
+
+
+        [TestMethod]
+        public void EditUser_Failed_UserDoesNotExist()
+        {
+            // Arrange
+            User user = new User { Login = "DoesNotExist", Password = "DoesNotExist" };
+
+            // Act & Assert
+            Assert.ThrowsException<Exception>(() => _userUtils.EditUser(user));
+        }
+
+        [TestMethod]
+        public void DeleteUser_Failed_UserDoesNotExist()
+        {
+            // Arrange
+            string nonExistentUser = "nonExistentUser";
+
+            // Act & Assert
+            Assert.ThrowsException<Exception>(() => _userUtils.DeleteUser(nonExistentUser));
         }
     }
 }

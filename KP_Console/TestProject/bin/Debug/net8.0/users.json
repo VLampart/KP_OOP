@@ -1,7 +1,5 @@
 {
-  "$id": "1",
   "testuser": {
-    "$id": "2",
     "Login": "testuser",
     "Password": "testpassword",
     "Phone": "1234567890",
@@ -9,9 +7,9 @@
     "MiddleName": "User",
     "LastName": "Testuser",
     "IsAdmin": false,
-    "IsAuth": true,
+    "IsAuth": false,
     "Cart": {
-      "$id": "3"
+      "1": 4
     }
   }
 }

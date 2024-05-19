@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using Interfaces;
+using Utils;
 
 namespace Users
 {
@@ -39,11 +42,10 @@ namespace Users
             MiddleName = "";
             LastName = "";
             IsAdmin = false;
-            IsAuth = false;
             Cart = new Dictionary<uint, uint>();
         }
 
-        public User(string login, string password, string phone, string firstName, string middleName, string lastName, bool isAdmin, bool isAuth)
+        public User(string login, string password, string phone, string firstName, string middleName, string lastName, bool isAdmin)
         {
             Login = login;
             Password = password;
@@ -52,21 +54,19 @@ namespace Users
             MiddleName = middleName;
             LastName = lastName;
             IsAdmin = isAdmin;
-            IsAuth = isAuth;
             Cart = new Dictionary<uint, uint>();
         }
 
         void IUserActions.LogOut()
         {
-            if (IsAuth)
+            UserUtils userUtils = new UserUtils();
+            if (this.IsAuth)
             {
-                IsAuth = false;
+                this.IsAuth = false;
                 Console.WriteLine("Logout successful!");
+                userUtils.EditUser(this);
             }
-            else
-            {
-                throw new Exception("Error! You are not authorized.");
-            }
+            else Console.WriteLine("Error! User is not logged in.");
         }
 
         void IUserActions.AddToCart(uint productId, uint productCount)
@@ -79,7 +79,8 @@ namespace Users
             {
                 Cart.Add(productId, productCount);
             }
-
+            UserUtils userUtils = new UserUtils();
+            userUtils.EditUser(this);
             Console.WriteLine("Product added to cart!");
         }
 
@@ -96,12 +97,40 @@ namespace Users
             }
         }
 
-        void IUserActions.ConfirmOrder()
+        void IUserActions.ConfirmOrder(string folderpath, bool open)
         {
             if (Cart.Count > 0)
             {
-                Console.WriteLine("Order confirmed!");
+                ProductUtils productUtils = new ProductUtils();
+                string check = "Покупка:\n";
+                double fullprice = 0;
+                foreach (var item in cart)
+                {
+                    var p = productUtils.Products[item.Key];
+                    if (p.ProductCount < item.Value) throw new Exception($"Недостатньо продуктів для замовлення: {p.ProductCaption}, на складі не вистачає {item.Value - p.ProductCount} шт.");
+                    p.ProductCount -= item.Value;
+                    productUtils.EditProduct(p);
+                    var price = productUtils.Products[item.Key].ProductPrice * item.Value;
+                    check += $"{item.Key} | {productUtils.Products[item.Key].ProductCaption} | {item.Value} шт. | {price} грн.\n";
+                    fullprice += price;
+                }
+                check += $"Ціна: {fullprice} грн.";
+                string filename = Path.Combine(folderpath, DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss") + "-order.txt");
+                StreamWriter writer = new StreamWriter(filename);
+                writer.WriteLine(check);
+                writer.Close();
+                try
+                {
+                    if (open) Process.Start("notepad.exe", filename);
+
+                }catch(Exception e)
+                {
+                    Debug.WriteLine("Помилка відкриття!" + e.Message);
+                }
                 Cart.Clear();
+                UserUtils userUtils = new UserUtils();
+                userUtils.EditUser(this);
+                Console.WriteLine("Order confirmed!");
             }
             else
             {
@@ -111,7 +140,7 @@ namespace Users
 
         public override string ToString()
         {
-            return $"Login: {Login} \nPassword: {Password} \nPhone: {FirstName} \nMiddleName: {MiddleName} \nLastName: {LastName} \nIsAdmin: {IsAdmin} \nIsAuth: {IsAuth}";
+            return $"Login: {Login} \nPassword: {Password} \nPhone: {FirstName} \nMiddleName: {MiddleName} \nLastName: {LastName} \nIsAdmin: {IsAdmin}";
         }
     }
 }

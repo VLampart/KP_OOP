@@ -1,0 +1,52 @@
+D:\KHAI\C#\KP\KP\bin\Debug\net8.0-windows\KP.exe
+D:\KHAI\C#\KP\KP\bin\Debug\net8.0-windows\KP.deps.json
+D:\KHAI\C#\KP\KP\bin\Debug\net8.0-windows\KP.runtimeconfig.json
+D:\KHAI\C#\KP\KP\bin\Debug\net8.0-windows\KP.dll
+D:\KHAI\C#\KP\KP\bin\Debug\net8.0-windows\KP.pdb
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.AuthenticationForm.resources
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.CartForm.resources
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.CatalogForm.resources
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.HeaderControl.resources
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.ProductForm.resources
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.Properties.Resources.resources
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.RegisterForm.resources
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.csproj.GenerateResource.cache
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.GeneratedMSBuildEditorConfig.editorconfig
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.AssemblyInfoInputs.cache
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.AssemblyInfo.cs
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.csproj.CoreCompileInputs.cache
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.dll
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\refint\KP.dll
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.pdb
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.genruntimeconfig.cache
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\ref\KP.dll
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.ListItem.resources
+D:\KHAI\C#\KP\KP\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.csproj.AssemblyReference.cache
+D:\KHAI\C#\KP\KP\obj\Debug\net8.0-windows\KP.csproj.Up2Date
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.csproj.AssemblyReference.cache
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.dll
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\refint\KP.dll
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.pdb
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\bin\Debug\net8.0-windows\KP.exe
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\bin\Debug\net8.0-windows\KP.deps.json
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\bin\Debug\net8.0-windows\KP.runtimeconfig.json
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\bin\Debug\net8.0-windows\KP.dll
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\bin\Debug\net8.0-windows\KP.pdb
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.AuthenticationForm.resources
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.CartForm.resources
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.CatalogForm.resources
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.HeaderControl.resources
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.ListItem.resources
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.ProductForm.resources
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.Properties.Resources.resources
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.RegisterForm.resources
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.csproj.GenerateResource.cache
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.AssemblyInfoInputs.cache
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.AssemblyInfo.cs
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.csproj.CoreCompileInputs.cache
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.csproj.Up2Date
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\KP.genruntimeconfig.cache
+C:\Users\savon\OneDrive\Рабочий стол\KP\KP\obj\Debug\net8.0-windows\ref\KP.dll

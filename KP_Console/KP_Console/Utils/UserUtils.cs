@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Products;
 
 namespace Utils
 {
@@ -11,18 +12,32 @@ namespace Utils
     {
         private Dictionary<string, User> users = new Dictionary<string, User>();
         private JsonUtils jsonUtils = new JsonUtils();
-        public string fileName = "users.json";
+        private string fileName;
 
         public Dictionary<string, User> Users { get => users; set => users = value; }
 
-        public UserUtils(string filename = "users.json")
+        public UserUtils(string _filename = "users.json")
         {
-            fileName = filename;
-            LoadUserFromJson();
-            foreach (User user in users.Values)
+            fileName = _filename;
+            if (File.Exists(fileName))
             {
-                Console.WriteLine(Convert.ChangeType(user, user.GetType()));
+                LoadUserFromJson();
+                foreach (User user in users.Values)
+                {
+                    Console.WriteLine(Convert.ChangeType(user, user.GetType()));
+                }
             }
+            else
+            {
+                Users = new Dictionary<string, User>();
+            }
+        }
+
+        public User AuthUser()
+        {
+            foreach (User user in Users.Values)
+                if (user.IsAuth) return user;
+            return null;
         }
 
         public void AddUser(User user)
@@ -33,6 +48,10 @@ namespace Utils
 
         public void EditUser(User user)
         {
+            if (!Users.ContainsKey(user.Login))
+            {
+                throw new Exception("Error! User does not exist");
+            }
             users[user.Login] = user;
             SaveUserToJson();
         }
@@ -65,7 +84,7 @@ namespace Utils
             {
                 throw new Exception("Error! User with this login already exists.");
             }
-            User newUser = new User(login, password, phone, firstName, middleName, lastName, false, true);
+            User newUser = new User(login, password, phone, firstName, middleName, lastName, isAdmin);
 
             userUtils.AddUser(newUser);
 
@@ -79,6 +98,7 @@ namespace Utils
             {
                 User user = userUtils.Users[login];
                 user.IsAuth = true;
+                userUtils.EditUser(user);
                 Console.WriteLine("Authorization successful!");
                 return user;
             }

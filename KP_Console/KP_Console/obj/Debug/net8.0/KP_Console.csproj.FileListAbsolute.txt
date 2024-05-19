@@ -10,9 +10,9 @@ D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\KP_Console.AssemblyInfo
 D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\KP_Console.AssemblyInfo.cs
 D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\KP_Console.csproj.CoreCompileInputs.cache
 D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\KP_Console.sourcelink.json
-D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\KP_Console.csproj.CopyComplete
 D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\KP_Console.dll
 D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\refint\KP_Console.dll
 D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\KP_Console.pdb
 D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\KP_Console.genruntimeconfig.cache
 D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\ref\KP_Console.dll
+D:\KHAI\C#\KP_OOP\KP_Console\KP_Console\obj\Debug\net8.0\KP_Console.csproj.Up2Date

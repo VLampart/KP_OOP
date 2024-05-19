@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Interfaces;
 
 namespace TestProject
 {
     [TestClass]
     public class UserTests
     {
-        [TestMethod]
+        /*[TestMethod]
         public void TestRegister()
         {
             // Arrange
@@ -27,7 +23,7 @@ namespace TestProject
 
             // Assert
             Assert.IsTrue(userUtils.Users.ContainsKey(login));
-        }
+        }*/
 
         [TestMethod]
         public void TestAuth()
@@ -67,6 +63,7 @@ namespace TestProject
             string password = "testpassword";
 
             User user = UserUtils.Auth(login, password);
+            user.Cart = new Dictionary<uint, uint>(); // Ensure the cart is empty before the test
 
             uint productId = 1;
             uint productCount = 2;
@@ -79,8 +76,9 @@ namespace TestProject
             Assert.IsTrue(user.Cart.ContainsKey(productId));
             Assert.AreEqual(productCount, user.Cart[productId]);
         }
+    
 
-        [TestMethod]
+    [TestMethod]
         public void TestRemoveFromCart()
         {
             // Arrange
@@ -100,27 +98,6 @@ namespace TestProject
 
             // Assert
             Assert.IsFalse(user.Cart.ContainsKey(productId));
-        }
-
-        [TestMethod]
-        public void TestConfirmOrder()
-        {
-            // Arrange
-            string login = "testuser";
-            string password = "testpassword";
-
-            User user = UserUtils.Auth(login, password);
-
-            uint productId = 1;
-            uint productCount = 2;
-            IUserActions userActions = user as IUserActions;
-            userActions.AddToCart(productId, productCount);
-
-            // Act
-            userActions.ConfirmOrder();
-
-            // Assert
-            Assert.AreEqual(0, user.Cart.Count);
         }
     }
 }

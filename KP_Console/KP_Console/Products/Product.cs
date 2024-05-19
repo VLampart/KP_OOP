@@ -24,7 +24,7 @@ namespace Products
 
         public Product()
         {
-            ProductID = (uint)Guid.NewGuid().GetHashCode();
+            ProductID = 0;
             ProductCaption = "";
             ProductManufacturer = "";
             ProductPrice = 0;
@@ -34,7 +34,7 @@ namespace Products
 
         public Product(string productCaption, string productManufacturer, double productPrice, string productDescription, uint productCount)
         {
-            ProductID = (uint)Guid.NewGuid().GetHashCode();
+            ProductID = 0;
             ProductCaption = productCaption;
             ProductManufacturer = productManufacturer;
             ProductPrice = productPrice;

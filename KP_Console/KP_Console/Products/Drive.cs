@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace Products
 {
-    public enum DriveType
+    public enum DRIVEType
     {
         HDD,
         SSD,
         NVMe
     }
-
     public enum DriveInterface
     {
         SATA,
         mSATA,
         M2
     }
-
     public class Drive : Product
     {
         private uint driveCapacity;
@@ -27,7 +25,7 @@ namespace Products
         private uint driveWrite;
 
         public uint DriveCapacity { get => driveCapacity; set => driveCapacity = value; }
-        public DriveType DriveType { get; set; }
+        public DRIVEType DRIVEType { get; set; }
         public DriveInterface DriveInterface { get; set; }
         public uint DriveRead { get => driveRead; set => driveRead = value; }
         public uint DriveWrite { get => driveWrite; set => driveWrite = value; }
@@ -35,16 +33,16 @@ namespace Products
         public Drive() : base()
         {
             DriveCapacity = 0;
-            DriveType = DriveType.HDD;
+            DRIVEType = DRIVEType.HDD;
             DriveInterface = DriveInterface.SATA;
             DriveRead = 0;
             DriveWrite = 0;
         }
 
-        public Drive(string productCaption, string productManufacturer, double productPrice, string productDescription, uint productCount, uint driveCapacity, DriveType driveType, DriveInterface driveInterface, uint driveRead, uint driveWrite) : base(productCaption, productManufacturer, productPrice, productDescription, productCount)
+        public Drive(string productCaption, string productManufacturer, double productPrice, string productDescription, uint productCount, uint driveCapacity, DRIVEType driveType, DriveInterface driveInterface, uint driveRead, uint driveWrite) : base(productCaption, productManufacturer, productPrice, productDescription, productCount)
         {
             DriveCapacity = driveCapacity;
-            DriveType = driveType;
+            DRIVEType = driveType;
             DriveInterface = driveInterface;
             DriveRead = driveRead;
             DriveWrite = driveWrite;
@@ -52,7 +50,7 @@ namespace Products
 
         public override string ToString()
         {
-            return base.ToString() + $"\nDriveCapacity: {DriveCapacity}\nDriveType: {DriveType}\nDriveInterface: {DriveInterface}\nDriveRead: {DriveRead}\nDriveWrite: {DriveWrite}";
+            return base.ToString() + $"\nDriveCapacity: {DriveCapacity}\nDriveType: {DRIVEType}\nDriveInterface: {DriveInterface}\nDriveRead: {DriveRead}\nDriveWrite: {DriveWrite}";
         }
     }
 }

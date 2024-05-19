@@ -110,9 +110,9 @@ D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\TestProject.AssemblyIn
 D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\TestProject.AssemblyInfo.cs
 D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\TestProject.csproj.CoreCompileInputs.cache
 D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\TestProject.sourcelink.json
-D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\TestProject.csproj.CopyComplete
 D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\TestProject.dll
 D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\refint\TestProject.dll
 D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\TestProject.pdb
 D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\TestProject.genruntimeconfig.cache
 D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\ref\TestProject.dll
+D:\KHAI\C#\KP_OOP\KP_Console\TestProject\obj\Debug\net8.0\TestProj.121896E9.Up2Date
